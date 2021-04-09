@@ -62,6 +62,13 @@ class Cashier extends Component
         }
     }
 
+    public function clearCart()
+    {
+        $this->tempCart = [];
+        $this->cart = [];
+        Cart::query()->delete();
+    }
+
     public function validateCheckout()
     {
         $this->payment = (float) $this->payment;
@@ -87,6 +94,7 @@ class Cashier extends Component
 
         $product->save();
     }
+
 
     public function checkout()
     {
@@ -174,12 +182,5 @@ class Cashier extends Component
             $this->change = 0;
 
         return view('livewire.cashier');
-    }
-
-    public function clearCart()
-    {
-        $this->tempCart = [];
-        $this->cart = [];
-        Cart::query()->delete();
     }
 }

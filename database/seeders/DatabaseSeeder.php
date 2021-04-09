@@ -15,11 +15,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // User::query()->create([
-        //     'name' => 'Heaven',
-        //     'email' => 'email@email.com',
-        //     'password' => Hash::make('12345678'),
-        // ]);
+        User::query()->create([
+             'name' => 'Surya',
+             'email' => 'surya@email.com',
+             'password' => Hash::make('12345678'),
+         ]);
 
         $this->call(ProductSeeder::class);
     }

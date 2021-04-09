@@ -1,6 +1,16 @@
 <div class="container-fluid">
+
+        <div class="col-12 pr-2 mb-3">
+            <div class="card">
+                <div class="card-body text-center bold">
+                    Hanya VGA terbaik yang tersedia
+                </div>
+            </div>
+        </div>
+
     <div class="d-flex">
         <a class="btn btn-primary ml-auto mb-2" href="/checkout">Riwayat Transaksi</a>
+        <a class="btn btn-danger ml-2 mb-2" wire:click="clearCart()">Kosongi Keranjang</a>
     </div>
     <div class="row">
         <div class="col-6 pr-2">
@@ -61,7 +71,7 @@
                             <tr>
                                 <th>Nama</th>
                                 <th>Kuantitas</th>
-                                <th>Harga</th>
+                                <th class="text-right">Harga</th>
                                 <th class="text-right">Total</th>
                             </tr>
                         </thead>
@@ -115,7 +125,6 @@
                         </h4>
                         <hr>
                         <div class="d-flex">
-                            <button class="btn btn-success ml-auto" wire:click="clearCart()">Kosongi Keranjang</button>
                             <button class="btn btn-success ml-auto" type="submit">Checkout</button>
                         </div>
                     </form>
